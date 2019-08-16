@@ -15,7 +15,7 @@
   "scripts": {
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
-    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "build:style": "tailwind build src/ui/styles/index.css -o src/ui/styles/tailwind.css",
     "test": "react-scripts test"
   },
   "eslintConfig": {
