@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Page from "../components/layout/Page";
+import useDate from "../../services/useDate";
+import BackgroundImage from "../../assets/img/elon.png";
 
 interface LaunchDate {
   date: Date;
@@ -10,6 +12,7 @@ interface LaunchDate {
 
 const Home = () => {
   const [lastLaunchDate, setLastLaunchDate] = useState<LaunchDate | null>(null);
+  // const { date, setDate, getWeekday } = useDate();
 
   useEffect(() => {
     const fetchLastLaunch = async () => {
@@ -29,7 +32,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Page name="page-home">
+    <Page name="page-home" backgroundImage={BackgroundImage}>
       <div className="w-full">
         <h1 className="mb-6 text-center text-2xl">Elon in space</h1>
         {lastLaunchDate && (
